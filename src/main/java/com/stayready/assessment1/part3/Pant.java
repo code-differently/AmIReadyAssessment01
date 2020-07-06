@@ -17,8 +17,9 @@ public class Pant {
      *
      * - create a field called "length" of type int
      */
-
-
+    private int length;
+    private double price;
+    private String size;
     /*
      * CONSTRUCTOR
      *
@@ -35,7 +36,22 @@ public class Pant {
      *
      */
 
+    public Pant(){
+        price = 0;
+        size = "Universal";
+        length = 32;
+    }
 
+    public Pant(double price, String size){
+        this.price = price;
+        this.size = size;
+        length = 32;
+    }
+    public Pant(double price, String size, int length){
+        this.price = price;
+        this.size = size;
+        this.length = length;
+    }
 
     /*
      * METHODS
@@ -53,5 +69,15 @@ public class Pant {
      *  Example: "This is a pant. It is Large. It is 32cm. It costs $19.99"
      */
 
+    public int getLength(){
+        return length;
+    }
 
+    public void setLength(int newLength){
+        length = newLength;
+    }
+
+    public String getDescription(){
+        return String.format("This is a pant. It is %s. It is %dcm. It cost $%.2f", size, length, price);
+    }
 }
