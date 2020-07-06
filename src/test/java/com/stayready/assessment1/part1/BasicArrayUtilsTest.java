@@ -7,10 +7,11 @@ import org.junit.Test;
  * Created by Baron Von Rhino 07/01/2020.
  */
 public class BasicArrayUtilsTest {
+
     @Test
     public void getFirstElementTest() {
         // Given
-        String[] inputArray = {"The", "quick", "brown"};
+        String[] inputArray = { "The", "quick", "brown" };
         String expected = "The";
 
         // When
@@ -23,7 +24,7 @@ public class BasicArrayUtilsTest {
     @Test
     public void getFirstElementTest2() {
         // Given
-        String[] inputArray = {"Somewhere", "over", "the", "rainbow"};
+        String[] inputArray = { "Somewhere", "over", "the", "rainbow" };
         String expected = "Somewhere";
 
         // When
@@ -36,7 +37,7 @@ public class BasicArrayUtilsTest {
     @Test
     public void getSecondTest() {
         // Given
-        String[] inputArray = {"The", "quick", "brown"};
+        String[] inputArray = { "The", "quick", "brown" };
         String expected = "quick";
 
         // When
@@ -49,7 +50,7 @@ public class BasicArrayUtilsTest {
     @Test
     public void getSecondTest2() {
         // Given
-        String[] inputArray = {"Somewhere", "over", "the", "rainbow"};
+        String[] inputArray = { "Somewhere", "over", "the", "rainbow" };
         String expected = "over";
 
         // When
@@ -62,8 +63,8 @@ public class BasicArrayUtilsTest {
     @Test
     public void reverseArrayTest() {
         // Given
-        String[] input = {"The", "quick", "brown"};
-        String[] expected = {"brown", "quick", "The"};
+        String[] input = { "The", "quick", "brown" };
+        String[] expected = { "brown", "quick", "The" };
 
         // When
         String[] actual = BasicArrayUtils.reverse(input);
@@ -75,7 +76,7 @@ public class BasicArrayUtilsTest {
     @Test
     public void reverseArrayTest2() {
         // Given
-        String[] expected = {"Somewhere", "over", "the", "rainbow"};
+        String[] expected = { "Somewhere", "over", "the", "rainbow" };
 
         // When
         String[] actual = BasicArrayUtils.reverse(BasicArrayUtils.reverse(expected));
@@ -87,7 +88,7 @@ public class BasicArrayUtilsTest {
     @Test
     public void firstLetterTest() {
         // Given
-        String[] inputArray = {"The", "quick", "brown", "fox"};
+        String[] inputArray = { "The", "quick", "brown", "fox" };
         String expected = "Tqbf";
 
         // When
@@ -100,7 +101,7 @@ public class BasicArrayUtilsTest {
     @Test
     public void firstLetterTest2() {
         // Given
-        String[] inputArray = {"Somewhere", "over", "the", "rainbow"};
+        String[] inputArray = { "Somewhere", "over", "the", "rainbow" };
         String expected = "Sotr";
 
         // When
