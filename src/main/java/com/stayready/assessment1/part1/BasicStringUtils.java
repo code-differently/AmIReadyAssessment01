@@ -14,7 +14,9 @@ public class BasicStringUtils {
      * @return string with identical contents, in the reverse order
      */
     public static String reverse(String str) {
-        return null;
+        StringBuilder sb = new StringBuilder(str);
+        sb.reverse();
+        return sb.toString();
     }
 
     /**
@@ -22,7 +24,14 @@ public class BasicStringUtils {
      * @return string with identical contents, with each word individually in reverse order
      */
     public static String reverseWords(String str) {
-        return null;
+        String words[] = str.split("\\s");
+        String reverseWord="";
+        for (String w: words){
+            StringBuilder sb = new StringBuilder(w);
+            sb.reverse();
+            reverseWord +=sb.toString() + " ";
+        }
+        return reverseWord.trim();
     }
 
     /**
@@ -39,7 +48,12 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-        return null;
+        String [] arrofStrings = str.split(" ");
+        String res = "";
+        for (String a: arrofStrings){
+            res += a.substring(1, a.length()-1) + " ";
+        }
+        return res;
     }
 
     /**
