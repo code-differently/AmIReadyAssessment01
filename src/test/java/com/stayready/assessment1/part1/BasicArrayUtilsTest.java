@@ -6,7 +6,8 @@ import org.junit.Test;
 /**
  * Created by Baron Von Rhino 07/01/2020.
  */
-public class BasicArrayUtilsTest {
+public class BasicArrayUtilsTest
+{
     @Test
     public void getFirstElementTest() {
         // Given
