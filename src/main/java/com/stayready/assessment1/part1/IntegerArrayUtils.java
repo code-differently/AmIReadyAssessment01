@@ -6,7 +6,14 @@ public class IntegerArrayUtils {
      * @return the sum of `intArray`
      */
     public static Integer getSum(Integer[] intArray) {
-        return null;
+
+        int sum = 0;
+
+        for(int currentIndex : intArray){
+            sum += currentIndex;
+        }
+
+        return sum;
     }
 
     /**
@@ -14,7 +21,14 @@ public class IntegerArrayUtils {
      * @return the product of `intArray`
      */
     public static Integer getProduct(Integer[] intArray) {
-        return null;
+       
+        int product = 1;
+
+        for(int currentIndex : intArray){
+            product *= currentIndex;
+        }
+
+        return product;
     }
 
     /**
@@ -22,7 +36,11 @@ public class IntegerArrayUtils {
      * @return the sum of `intArray` divided by number of elements in `intArray`
      */
     public static Double getAverage(Integer[] intArray) {
-        return null;
+        
+        int count = intArray.length;
+
+        double average = (getSum(intArray)) / count; 
+        return average;
     }
 
     /**
@@ -30,6 +48,14 @@ public class IntegerArrayUtils {
      * @return the largest integer in intArray
      */
     public static Integer getLargest(Integer[] intArray) {
-        return null;
+
+        int largestElement = intArray[0];
+
+        for(int i = 1; i < intArray.length; i++){
+            if(intArray[i] > largestElement)
+                largestElement = intArray[i];
+        }
+
+        return largestElement;
     }
 }

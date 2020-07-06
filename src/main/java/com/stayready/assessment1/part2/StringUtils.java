@@ -8,7 +8,9 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+
+        String[] words = sentence.split(" ");
+        return words;
     }
 
 
@@ -18,7 +20,11 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+
+        String[] words = getWords(sentence);
+        String firstWord = words[0];
+
+        return firstWord;
     }
 
     /**
@@ -27,6 +33,25 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
+
+        /*String reversedWord = getFirstWord(sentence);
+        char[] arr = new char[reversedWord.length()];
+        int correctWordIndex = 0;
+
+        for(int i = reversedWord.length() - 1; i >= 0; i--){
+            arr[correctWordIndex] = reversedWord.charAt(i);
+        }
+
+        String newWord = new String(arr);
+        String[] newArr = getWords(sentence);
+        newArr[0] = newWord;
+
+        StringBuilder sb = new StringBuilder();
+        for(String index : newArr){
+            sb.append(index);
+        }
+
+        return sb.toString();*/
         return null;
     }
 
@@ -47,7 +72,11 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+
+        StringBuilder sb = new StringBuilder(str);
+        sb.deleteCharAt(index);
+
+        return sb.toString();
     }
 
 }
