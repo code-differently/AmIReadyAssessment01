@@ -3,6 +3,7 @@ package com.stayready.assessment1.part1;
 import org.junit.Assert;
 import org.junit.Test;
 
+
 /**
  * Created by Baron Von Rhino 07/01/2020.
  */
