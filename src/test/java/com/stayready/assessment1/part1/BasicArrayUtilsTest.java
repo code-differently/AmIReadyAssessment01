@@ -6,9 +6,11 @@ import org.junit.Test;
 /**
  * Created by Baron Von Rhino 07/01/2020.
  */
-public class BasicArrayUtilsTest {
+public class BasicArrayUtilsTest 
+{
     @Test
-    public void getFirstElementTest() {
+    public void getFirstElementTest() 
+    {
         // Given
         String[] inputArray = {"The", "quick", "brown"};
         String expected = "The";
@@ -21,20 +23,22 @@ public class BasicArrayUtilsTest {
     }
 
     @Test
-    public void getFirstElementTest2() {
+    public void getFirstElementTest2() 
+    {
         // Given
         String[] inputArray = {"Somewhere", "over", "the", "rainbow"};
         String expected = "Somewhere";
 
         // When
-        String actual = BasicArrayUtils.getFirstElement(inputArray);
+        String actual = BasicArrayUtils.getFirstElement2(inputArray);
 
         // Then
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void getSecondTest() {
+    public void getSecondTest() 
+    {
         // Given
         String[] inputArray = {"The", "quick", "brown"};
         String expected = "quick";
@@ -47,45 +51,36 @@ public class BasicArrayUtilsTest {
     }
 
     @Test
-    public void getSecondTest2() {
+    public void getSecondTest2() 
+    {
         // Given
         String[] inputArray = {"Somewhere", "over", "the", "rainbow"};
         String expected = "over";
 
         // When
-        String actual = BasicArrayUtils.getSecondElement(inputArray);
+        String actual = BasicArrayUtils.getSecondElement2(inputArray);
 
         // Then
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void reverseArrayTest() {
+    public void reverseArrayTest() 
+    {
         // Given
-        String[] input = {"The", "quick", "brown"};
+        String[] inputArray = {"The", "quick", "brown"};
         String[] expected = {"brown", "quick", "The"};
 
         // When
-        String[] actual = BasicArrayUtils.reverse(input);
+        String actual = BasicArrayUtils.reverse(inputArray);
 
         // Then
-        Assert.assertArrayEquals(expected, actual);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void reverseArrayTest2() {
-        // Given
-        String[] expected = {"Somewhere", "over", "the", "rainbow"};
-
-        // When
-        String[] actual = BasicArrayUtils.reverse(BasicArrayUtils.reverse(expected));
-
-        // Then
-        Assert.assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    public void firstLetterTest() {
+    public void firstLetterTest() 
+    {
         // Given
         String[] inputArray = {"The", "quick", "brown", "fox"};
         String expected = "Tqbf";

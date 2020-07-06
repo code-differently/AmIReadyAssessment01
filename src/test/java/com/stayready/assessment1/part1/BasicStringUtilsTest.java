@@ -6,9 +6,11 @@ import org.junit.Test;
 /**
  * Created by Baron Von Rhino 07/01/2020.
  */
-public class BasicStringUtilsTest {
+public class BasicStringUtilsTest 
+{
     @Test
-    public void camelCaseTest() {
+    public void camelCaseTest() 
+    {
         // Given
         String input = "she sells sea shells";
         String expected = "She Sells Sea Shells";
@@ -21,7 +23,8 @@ public class BasicStringUtilsTest {
     }
 
     @Test
-    public void reverseTest() {
+    public void reverseTest() 
+    {
         // Given
         String input = "she sells sea shells";
         String expected = "sllehs aes slles ehs";
@@ -34,7 +37,8 @@ public class BasicStringUtilsTest {
     }
 
     @Test
-    public void reverseWordsTest() {
+    public void reverseWordsTest() 
+    {
         // Given
         String input = "she sells sea shells";
         String expected = "ehs slles aes sllehs";
@@ -48,7 +52,8 @@ public class BasicStringUtilsTest {
 
 
     @Test
-    public void reverseThenCamelCaseTest() {
+    public void reverseThenCamelCaseTest() 
+    {
         // Given
         String input = "she sells sea shells";
         String expected = "Sllehs Aes Slles Ehs";
@@ -62,7 +67,8 @@ public class BasicStringUtilsTest {
 
 
     @Test
-    public void removeFirstAndLastCharacterTest() {
+    public void removeFirstAndLastCharacterTest() 
+    {
         // Given
         String input = "she sells sea shells";
         String expected = "he sells sea shell";
@@ -75,7 +81,8 @@ public class BasicStringUtilsTest {
     }
 
     @Test
-    public void invertCasingTest1() {
+    public void invertCasingTest1() 
+    {
         // Given
         String input = "shE sells SEA sHeLlS";
         String expected = "SHe SELLS sea ShElLs";
@@ -88,7 +95,8 @@ public class BasicStringUtilsTest {
     }
 
     @Test
-    public void invertCasingTest2() {
+    public void invertCasingTest2() 
+    {
         // Given
         String expected = "sHE sELls SEa sHeLlS";
 
