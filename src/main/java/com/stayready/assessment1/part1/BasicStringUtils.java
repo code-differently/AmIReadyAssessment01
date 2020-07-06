@@ -6,7 +6,13 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) {
-        return null;
+        String sentence []= str.split(" ");
+        String capital = " ";
+        for(String word: sentence) {
+            String first = word.substring(0,1);
+            capital+=first.toUpperCase();
+        }
+        return capital;
     }
 
     /**
@@ -14,7 +20,8 @@ public class BasicStringUtils {
      * @return string with identical contents, in the reverse order
      */
     public static String reverse(String str) {
-        return null;
+        StringBuilder builder = new StringBuilder(str);
+        return builder.reverse().toString();
     }
 
     /**
@@ -39,7 +46,8 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-        return null;
+        String word = str.substring(1, str.length()-1);
+        return word;
     }
 
     /**
