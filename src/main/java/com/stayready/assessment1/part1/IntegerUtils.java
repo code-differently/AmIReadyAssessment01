@@ -6,7 +6,11 @@ public class IntegerUtils {
      * @return the sum of all integers between 0 and not including `n`
      */
     public static Integer getSumOfN(Integer n) {
-        return null;
+        int value = 0;
+        for(int i = 0; i < n; i++) {
+            value += i;
+        }
+        return value;
     }
 
     /**
@@ -22,7 +26,7 @@ public class IntegerUtils {
      * @return true if the integer is even and false if it is not even.
      */
     public static Boolean isEven(Integer val) {
-        return null;
+        return val % 2 ==0 ;
     }
 }
 
