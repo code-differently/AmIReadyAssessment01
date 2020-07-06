@@ -14,6 +14,8 @@ public class CuttingBoard {
      *  - price is a double
      */
 
+    double price;
+
 
     /*
      * CONSTRUCTOR
@@ -23,6 +25,9 @@ public class CuttingBoard {
      *
      */
 
+     public CuttingBoard(double price) {
+        this.price = price;
+     }
 
 
 
@@ -38,5 +43,13 @@ public class CuttingBoard {
      *      "This cutting board costs $[price]"
      *      Example: "This cutting board costs $19.99"
      */
+
+     public double getPrice() {
+         return price;
+     }
+
+     public String getDescription() {
+         return "This cutting board costs $" + price;
+     }
 
 }

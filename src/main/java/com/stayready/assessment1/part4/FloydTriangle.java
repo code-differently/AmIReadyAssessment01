@@ -18,7 +18,23 @@ public class FloydTriangle {
      * @return a floyd triangle completed up the numOfRows rows
      */
     public static String generateTriangle(Integer numOfRows) {
-        return null;
+        int count = 1;
+        String a = "";
+        for (int i = 1; i <= numOfRows; i++) {
+            for (int j = 1; j <= i; j++) {
+                if (j != i) {
+                    a += count + " ";
+                    count++;
+                }
+                else {
+                    a += count;
+                    count++;
+                }
+            }
+            if (i != numOfRows)
+                a += "\n";
+        }
+        return a;
     }
 
     /**
@@ -26,6 +42,26 @@ public class FloydTriangle {
      * @return the row'th row of a floyd triangle
      */
     public static String getNthRow(Integer row) {
-        return null;
+        int count = 1;
+        String a = "";
+        for (int i = 1; i <= row; i++) {
+            for (int j = 1; j <= i; j++) {
+                if (i == row && j == i) {
+                    a += count;
+                    count++;
+                }
+                else if (i == row) {
+                    a += count + " ";
+                    count++;
+                }
+                else if (j != i) {
+                    count++;
+                }
+                else {
+                    count++;
+                }
+            }
+        }
+        return a;
     }
 }
