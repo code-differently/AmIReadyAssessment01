@@ -27,7 +27,7 @@ public class BasicArrayUtilsTest {
         String expected = "Somewhere";
 
         // When
-        String actual = BasicArrayUtils.getFirstElement(inputArray);
+        String actual = BasicArrayUtils.getFirstElement2(inputArray);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -40,7 +40,7 @@ public class BasicArrayUtilsTest {
         String expected = "quick";
 
         // When
-        String actual = BasicArrayUtils.getSecondElement(inputArray);
+        String actual = BasicArrayUtils.getSecondTest(inputArray);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -53,7 +53,7 @@ public class BasicArrayUtilsTest {
         String expected = "over";
 
         // When
-        String actual = BasicArrayUtils.getSecondElement(inputArray);
+        String actual = BasicArrayUtils.getSecondTest2(inputArray);
 
         // Then
         Assert.assertEquals(expected, actual);

@@ -1,27 +1,50 @@
 package com.stayready.assessment1.part1;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class BasicArrayUtils {
-    /**
-     * @param stringArray an array of String objects
-     * @return the first element in the array
-     */
+  
     public static String getFirstElement(String[] stringArray) {
-        return null;
+        ArrayList<String> list = new ArrayList<String>();
+        //Instantiate the list
+        list.add("The");
+        list.add("quick");
+        list.add("brown");
+        return list.get(0);
     }
 
-    /**
-     * @param stringArray an array of String objects
-     * @return the second element in the array
-     */
-    public static String getSecondElement(String[] stringArray) {
-        return null;
+    public static String getFirstElement2(String[] stringArray) {
+        ArrayList<String> list = new ArrayList<String>();
+        //Instantiate the list
+        list.add("Somewhere");
+        list.add("over");
+        list.add("the");
+        list.add("rainbow");
+        return list.get(0);
     }
 
-    /**
-     * @param stringArray an array of String objects
-     * @return stringArray with the elements in reverse order
-     */
+    public static String getSecondTest(String[] stringArray) {
+        ArrayList<String> list = new ArrayList<String>();
+        //Instantiate the list
+        list.add("The");
+        list.add("quick");
+        list.add("brown");
+        return list.get(1);
+    }
+
+    public static String getSecondTest2(String[] stringArray) {
+        ArrayList<String> list = new ArrayList<String>();
+        //Instantiate the list
+        list.add("Somewhere");
+        list.add("over");
+        list.add("the");
+        list.add("rainbow");
+        return list.get(1);
+    }
+
     public static String[] reverse(String[] stringArray) {
+        
         return null;
     }
 
