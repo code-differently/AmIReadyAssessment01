@@ -10,9 +10,10 @@ public class CuttingBoard {
     /**
      * FIELDS
      *
-     * A cutting board has two instance fields:
+     * A cutting board has one instance field:
      *  - price is a double
      */
+    private double price;
 
 
     /*
@@ -22,7 +23,9 @@ public class CuttingBoard {
      * to the parameter price.
      *
      */
-
+    public CuttingBoard(double price) {
+        this.price = price;
+    }
 
 
 
@@ -38,5 +41,12 @@ public class CuttingBoard {
      *      "This cutting board costs $[price]"
      *      Example: "This cutting board costs $19.99"
      */
+    public double getPrice() {
+        return this.price;
+    }
+
+    public String getDescription() {
+        return "This cutting board costs $" + this.price; 
+    }
 
 }
