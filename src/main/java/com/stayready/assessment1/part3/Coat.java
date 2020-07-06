@@ -6,7 +6,7 @@ package com.stayready.assessment1.part3;
  *
  * A coat extends a Garment
  */
-public class Coat {
+public class Coat extends Garment {
 
     /**
      * FIELDS
@@ -17,6 +17,8 @@ public class Coat {
      *
      * - create a field called "color" of type String
     */
+
+
 
 
     /*
