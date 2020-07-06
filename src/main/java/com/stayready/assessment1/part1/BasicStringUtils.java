@@ -6,7 +6,18 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) {
-        return null;
+
+        String arr[] = str.split(" ");
+        String newString = "";
+
+        for(int i = 0; i < arr.length; i++){
+            String current = arr[i];
+            current = current.substring(0,1).toUpperCase() + current.substring(1).toLowerCase();
+
+            newString += current + " ";
+        }
+
+        return newString;
     }
 
     /**

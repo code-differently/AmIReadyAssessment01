@@ -8,7 +8,15 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+
+        int count = 0;
+
+        for(int i = 0; i < objectArray.length; i++){
+            if(objectArray[i] == objectToCount)
+                count++;
+        }
+
+        return count;
     }
 
     /**
@@ -18,7 +26,19 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
+
+        int occurences = getNumberOfOccurrences(objectArray, objectToRemove);
+        int newIndex = 0;
+        Object[] newArray = new Object[objectArray.length - occurences];
+
+        for(int i = 0; i < objectArray.length; i++){
+            if(objectArray[i] != objectToRemove)
+            {
+                newArray[newIndex++] = objectArray[i];
+            }
+        }
+
+        return newArray;
     }
 
     /**
@@ -47,6 +67,17 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
+        /*Object[] mergedArray =  new Object[(objectArray.length) + (objectArrayToAdd.length)];
+        int currentIndex;
+
+        for(currentIndex = 0; currentIndex < objectArray.length; currentIndex++){
+            mergedArray[currentIndex] = objectArrayToAdd[currentIndex];
+        }
+
+        for(currentIndex = currentIndex; currentIndex < objectArray.length; currentIndex++){
+            mergedArray[currentIndex] = objectArrayToAdd[currentIndex];
+        }*/
+
         return null;
     }
 }
