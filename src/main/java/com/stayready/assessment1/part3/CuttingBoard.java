@@ -6,7 +6,7 @@ package com.stayready.assessment1.part3;
  *
  * A CuttingBoard implements Product
  */
-public class CuttingBoard {
+public class CuttingBoard implements Product {
     /**
      * FIELDS
      *
@@ -14,6 +14,7 @@ public class CuttingBoard {
      *  - price is a double
      */
 
+     private double price;
 
     /*
      * CONSTRUCTOR
@@ -23,8 +24,9 @@ public class CuttingBoard {
      *
      */
 
-
-
+     public CuttingBoard(double price) {
+         this.price = price;
+     }
 
     /*
      * METHODS
@@ -38,5 +40,13 @@ public class CuttingBoard {
      *      "This cutting board costs $[price]"
      *      Example: "This cutting board costs $19.99"
      */
+
+     public double getPrice() {
+         return price;
+     }
+
+     public String getDescription() {
+        return "This cutting board costs $" + price;
+     }
 
 }
