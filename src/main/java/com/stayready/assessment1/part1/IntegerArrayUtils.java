@@ -30,6 +30,6 @@ public class IntegerArrayUtils {
      * @return the largest integer in intArray
      */
     public static Integer getLargest(Integer[] intArray) {
-        return null;
+        return Math.max(intArray, intArray);
     }
 }
