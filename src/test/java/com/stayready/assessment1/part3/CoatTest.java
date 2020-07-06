@@ -74,10 +74,10 @@ public class CoatTest {
        Assert.assertEquals(expected, coat.getDescription());
    }
    
-//    @Test
-//    public void testIsProduct(){
-//        Assert.assertTrue(coat instanceof Product);
-//    }
+   @Test
+   public void testIsProduct(){
+       Assert.assertTrue(coat instanceof Product);
+   }
 
    @Test
    public void testIsGarment(){

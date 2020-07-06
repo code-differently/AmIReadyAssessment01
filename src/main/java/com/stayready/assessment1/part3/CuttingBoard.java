@@ -6,7 +6,7 @@ package com.stayready.assessment1.part3;
  *
  * A CuttingBoard implements Product
  */
-public class CuttingBoard {
+public class CuttingBoard implements Product{
     /**
      * FIELDS
      *

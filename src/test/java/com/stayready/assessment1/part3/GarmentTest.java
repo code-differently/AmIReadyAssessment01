@@ -45,11 +45,11 @@ public class GarmentTest {
        Assert.assertEquals("shirt", garment.getDescription());
    }
 
-//    @Test
-//    public void testIsProduct(){
-//        Garment garment = new Shirt(1, "M");
-//        Assert.assertTrue(garment instanceof Product);
-//    }
+   @Test
+   public void testIsProduct(){
+       Garment garment = new Shirt(1, "M");
+       Assert.assertTrue(garment instanceof Product);
+   }
 
     protected static class Shirt extends Garment {
 

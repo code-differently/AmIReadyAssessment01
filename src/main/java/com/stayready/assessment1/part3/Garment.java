@@ -7,7 +7,7 @@ package com.stayready.assessment1.part3;
  *
  *  Garment is an abstract class. It implements Product.
  */
-public class Garment {
+public class Garment implements Product {
     /**
      * FIELDS
      *
