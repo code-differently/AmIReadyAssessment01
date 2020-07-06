@@ -8,13 +8,8 @@ package com.stayready.assessment1.part3;
  *  Garment is an abstract class. It implements Product.
  */
 public class Garment {
-    /**
-     * FIELDS
-     *
-     * A garment has two instance fields:
-     *  - price is a double
-     *  - size is a String
-     */
+     Double price;
+     String size;
 
 
     /**
@@ -30,6 +25,25 @@ public class Garment {
      *
      * 3. A constructor that takes two fields double price and String size.
      */
+    public void construct()
+    {
+        price = 0.0;
+        size = "Universal";
+
+    }
+    public void Price(Double price)
+    {
+        this.price = price;
+    }
+    public void Size(String size)
+    {
+        this.size = size;
+    }
+    public void both(Double price, String size)
+    {
+        this.price = price;
+        this.size = size;
+    }
 
 
     /**
@@ -41,4 +55,12 @@ public class Garment {
      * 2.Create a getter method called "getSize" which return the size.
      *    The return type is String.
      */
+    public Double getPrice()
+    {
+        return this.price; 
+    }
+    public String getSize()
+    {
+        return this.size;
+    }
 }

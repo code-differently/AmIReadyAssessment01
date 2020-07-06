@@ -1,4 +1,5 @@
 package com.stayready.assessment1.part1;
+import java.lang.*;
 
 public class BasicStringUtils {
     /**
@@ -7,22 +8,24 @@ public class BasicStringUtils {
      */
     public static String camelCase(String str) {
         return null;
-    }
+        }
+        
+    
 
     /**
      * @param str string input from client
      * @return string with identical contents, in the reverse order
      */
     public static String reverse(String str) {
-        return null;
+        return new StringBuilder(str).reverse().toString();
     }
 
     /**
      * @param str string input from client
      * @return string with identical contents, with each word individually in reverse order
      */
-    public static String reverseWords(String str) {
-        return null;
+    public static String reverseWords(String str) {    
+        return str.toString();  
     }
 
     /**
