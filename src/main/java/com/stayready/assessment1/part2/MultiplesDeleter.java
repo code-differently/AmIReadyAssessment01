@@ -1,5 +1,7 @@
 package com.stayready.assessment1.part2;
 
+import java.util.Arrays;
+
 public class MultiplesDeleter {
     /**
      * @param ints array of Integer objects
@@ -7,7 +9,15 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public static Integer[] deleteEvens(Integer[] ints) {
-        return null;
+        Integer [] copy = new Integer[99];
+        int i = 0;
+        for (int a: ints){
+            if(a % 2 != 0){
+                copy[i] = a;
+                i++;
+            }
+        }
+        return Arrays.copyOf(copy, i);
     }
 
     /**
@@ -16,7 +26,15 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public static Integer[] deleteOdds(Integer[] ints) {
-        return null;
+        Integer [] copy = new Integer[99];
+        int i = 0;
+        for (int a: ints){
+            if(a % 2 == 0){
+                copy[i] = a;
+                i++;
+            }
+        }
+        return Arrays.copyOf(copy, i);
     }
 
     /**
@@ -25,7 +43,15 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public static Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+        Integer [] copy = new Integer[99];
+        int i = 0;
+        for (int a: ints){
+            if(a % 3 != 0){
+                copy[i] = a;
+                i++;
+            }
+        }
+        return Arrays.copyOf(copy, i);
     }
 
     /**
@@ -35,6 +61,14 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by `multiple` removed
      */
     public static Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
-        return null;
+        Integer [] copy = new Integer[99];
+        int i = 0;
+        for (int a: ints){
+            if(a % multiple != 0){
+                copy[i] = a;
+                i++;
+            }
+        }
+        return Arrays.copyOf(copy, i);
     }
 }

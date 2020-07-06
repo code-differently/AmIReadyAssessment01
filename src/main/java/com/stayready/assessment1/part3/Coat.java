@@ -17,7 +17,9 @@ public class Coat {
      *
      * - create a field called "color" of type String
     */
-
+    private String color;
+    private double price;
+    private String size;
 
     /*
      * CONSTRUCTOR
@@ -34,7 +36,22 @@ public class Coat {
      *     Set the params to the instance fields.
      *
      */
+    public Coat(){
+        price = 0;
+        size = "Universal";
+        color = "Black";
+    }
 
+    public Coat(double price){
+        this.price = price;
+        size = "Universal";
+        color = "Black";
+    }
+    public Coat(double price, String size, String color){
+        this.price = price;
+        this.size = size;
+        this.color = color;
+    }
 
     /*
      * METHODS
@@ -52,5 +69,15 @@ public class Coat {
      *      Example: "This is a Large Green coat. It costs $19.99"
 
      */
+    public String getColor(){
+        return color;
+    }
 
+    public void setColor(String newColor){
+        color = newColor;
+    }
+
+    public String getDescription(){
+       return String.format("This is a %s %s coat. It costs $%.2f",size,color,price);
+    }
 }
