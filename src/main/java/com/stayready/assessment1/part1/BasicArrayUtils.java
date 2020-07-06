@@ -6,7 +6,8 @@ public class BasicArrayUtils {
      * @return the first element in the array
      */
     public static String getFirstElement(String[] stringArray) {
-        return null;
+        String firstElement = stringArray[0];
+        return firstElement;
     }
 
     /**
@@ -14,7 +15,8 @@ public class BasicArrayUtils {
      * @return the second element in the array
      */
     public static String getSecondElement(String[] stringArray) {
-        return null;
+        String secondElement = stringArray[1];
+        return secondElement;
     }
 
     /**
@@ -22,7 +24,13 @@ public class BasicArrayUtils {
      * @return stringArray with the elements in reverse order
      */
     public static String[] reverse(String[] stringArray) {
-        return null;
+        int arrLength = stringArray.length;
+        String[] reversedArray = new String[arrLength];
+        for (int i = 0; i < stringArray.length; i++) {
+            reversedArray[i] = stringArray[arrLength - 1 - i];
+        }
+        stringArray = reversedArray;
+        return stringArray;
     }
 
     /**
@@ -30,6 +38,10 @@ public class BasicArrayUtils {
      * @return String made up of the first character in each element of stringArray
      */
     public static String getFirstLetterOfEachElement(String[] stringArray) {
-        return null;
+        StringBuilder newString = new StringBuilder();
+        for (String string : stringArray) {
+            newString.append(string.substring(0,1));
+        }
+        return newString.toString();
     }
 }

@@ -18,7 +18,26 @@ public class FloydTriangle {
      * @return a floyd triangle completed up the numOfRows rows
      */
     public static String generateTriangle(Integer numOfRows) {
-        return null;
+        int count = 1;
+        int rowNum = 1;
+        StringBuilder triangle = new StringBuilder();
+        for (int i = 0; i < numOfRows; i++) {
+            for (int k = 0; k < rowNum; k++) {
+                if (k < rowNum - 1) {
+                    triangle.append(count + " ");
+                    count++;
+                } else {
+                    triangle.append(count);
+                    count++;
+                }
+            }
+            rowNum++;
+            if (i < numOfRows - 1) {
+                triangle.append("\n");
+            }
+        }
+        System.out.println(triangle.toString());
+        return triangle.toString();
     }
 
     /**
@@ -26,6 +45,32 @@ public class FloydTriangle {
      * @return the row'th row of a floyd triangle
      */
     public static String getNthRow(Integer row) {
-        return null;
+        int count = 1;
+        int rowNum = 1;
+        StringBuilder triangle = new StringBuilder();
+        StringBuilder rowT = new StringBuilder();
+        for (int i = 0; i < row; i++) {
+            for (int k = 0; k < rowNum; k++) {
+                if (k < rowNum - 1) {
+                    triangle.append(count + " ");
+                    rowT.append(count + " ");
+                    count++;
+                } else {
+                    triangle.append(count);
+                    rowT.append(count);
+                    count++;
+                }
+            } 
+            rowNum++;
+            if (i < row - 1) {
+                triangle.append("\n");
+            }
+            if (i == row - 1) {
+               return rowT.toString();
+            }
+            rowT.setLength(0);
+        }
+        System.out.println(triangle.toString());
+        return triangle.toString();
     }
 }
