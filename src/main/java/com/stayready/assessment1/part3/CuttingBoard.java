@@ -6,7 +6,14 @@ package com.stayready.assessment1.part3;
  *
  * A CuttingBoard implements Product
  */
-public class CuttingBoard {
+public class CuttingBoard 
+{
+    double price = 0.0;
+
+    public CuttingBoard(double price)
+    {
+        this.price = price;
+    }
     /**
      * FIELDS
      *
@@ -39,4 +46,15 @@ public class CuttingBoard {
      *      Example: "This cutting board costs $19.99"
      */
 
+     public double getPrice()
+     {
+         return price;
+     }
+
+     public String getDescription()
+     {
+         return "This cutting board costs $"+price;
+     }
+
 }
+ 

@@ -6,7 +6,8 @@ import org.junit.Test;
 public class FloydTriangleTest {
 
     @Test
-    public void generateTriangleTest() {
+    public void generateTriangleTest() 
+    {
         // Given
         Integer input = 1;
         String expected = "1";
