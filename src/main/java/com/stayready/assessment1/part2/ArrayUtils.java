@@ -3,7 +3,6 @@ package com.stayready.assessment1.part2;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
-import java.util.Arrays;
 
 public class ArrayUtils {
     public static void main(String [] args) {
