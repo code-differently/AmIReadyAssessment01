@@ -1,5 +1,7 @@
 package com.stayready.assessment1.part2;
 
+import com.stayready.assessment1.part1.BasicStringUtils;
+
 public class StringUtils {
 
     /**
@@ -8,7 +10,8 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+        String[] answer = sentence.split(" ");
+        return answer;
     }
 
 
@@ -18,7 +21,8 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+        String[] answer = sentence.split(" ");
+        return answer[0];
     }
 
     /**
@@ -27,7 +31,20 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
+        String[] answer = sentence.split(" ");
+        String s = "";
+
+        for(int i = 0; i < answer.length; i++){
+            if(i == 0){
+                answer[i] = BasicStringUtils.reverse(answer[i]) + " ";
+                s += answer[i];
+            } else if (i != answer.length -1 ) {
+                s = s + answer[i] + " ";
+            } else{ 
+                s += answer[i];
+            }
+        }
+        return s;
     }
 
     /**
@@ -36,7 +53,12 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
-        return null;
+        String s = reverseFirstWord(sentence); 
+        String answer = BasicStringUtils.camelCase(s);
+        
+        return answer = answer.replaceAll("\\s", "");
+
+        
     }
 
 
@@ -47,7 +69,7 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+        return str.substring(0, index) + str.substring(index + 1);
     }
 
 }

@@ -17,8 +17,20 @@ public class FloydTriangle {
      * @param numOfRows number of rows that should be returned by the generator
      * @return a floyd triangle completed up the numOfRows rows
      */
-    public static String generateTriangle(Integer numOfRows) {
-        return null;
+    public static String generateTriangle(Integer numOfRows) { 
+        String ans = ""; 
+        int num = 1;
+        for(int row = 1; row <= numOfRows; row++){
+            for(int col= 1; col <= row; col++){
+                    ans += num + " ";
+                    num++;
+            }
+            if(row != numOfRows){  
+                ans += "\n"; //make sure to add a new line
+            }  
+        }
+
+        return ans;
     }
 
     /**
@@ -26,6 +38,8 @@ public class FloydTriangle {
      * @return the row'th row of a floyd triangle
      */
     public static String getNthRow(Integer row) {
-        return null;
+        String triangle = generateTriangle(row);
+        String[] answer = triangle.split("\n");
+        return answer[row -1];
     }
 }
