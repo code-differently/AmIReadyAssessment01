@@ -12,7 +12,7 @@ public class StringUtilsTest {
     public void getWordsTest() {
         // Given
         String inputString = "The quick brown fox jumps";
-        String[] expected = {"The", "quick", "brown", "fox", "jumps"};
+        String[] expected = { "The", "quick", "brown", "fox", "jumps" };
 
         // When
         String[] actual = StringUtils.getWords(inputString);
@@ -25,7 +25,7 @@ public class StringUtilsTest {
     public void getWordsTest2() {
         // Given
         String inputString = "She sells sea shells";
-        String[] expected = {"She", "sells", "sea", "shells"};
+        String[] expected = { "She", "sells", "sea", "shells" };
 
         // When
         String[] actual = StringUtils.getWords(inputString);
@@ -33,7 +33,6 @@ public class StringUtilsTest {
         // Then
         UnitTestingUtils.assertArrayEquality(expected, actual);
     }
-
 
     @Test
     public void getFirstWordTest() {
@@ -61,11 +60,10 @@ public class StringUtilsTest {
         Assert.assertEquals(expected, actual);
     }
 
-
     @Test
     public void reverseFirstWordTest() {
         // Given
-        String inputString = "Yats Hunter";
+        String inputString = "Yats Ready";
         String expected = "staY Ready";
 
         // When
@@ -91,7 +89,7 @@ public class StringUtilsTest {
     @Test
     public void reverseFirstWordThenCamelCaseTest() {
         // Given
-        String inputString = "yats Hunter";
+        String inputString = "Yats Ready";
         String expected = "StayReady";
 
         // When

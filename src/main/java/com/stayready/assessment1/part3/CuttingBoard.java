@@ -10,33 +10,39 @@ public class CuttingBoard {
     /**
      * FIELDS
      *
-     * A cutting board has two instance fields:
-     *  - price is a double
+     * A cutting board has two instance fields: - price is a double
      */
-
+    double price;
 
     /*
      * CONSTRUCTOR
      *
-     * Create 1 constructor that takes a "price". Set the instance price field
-     * to the parameter price.
+     * Create 1 constructor that takes a "price". Set the instance price field to
+     * the parameter price.
      *
      */
+    public CuttingBoard(double newPrice) {
+        price = newPrice;
 
-
-
+    }
 
     /*
      * METHODS
      *
-     * 1. Create a getter method called "getPrice" to return the price.
-     *    The return type is double.
+     * 1. Create a getter method called "getPrice" to return the price. The return
+     * type is double.
      *
-     * 2. Create a method called "getDescription()". It returns a
-     *  String description of the object.
-     *      It should be formatted like this:
-     *      "This cutting board costs $[price]"
-     *      Example: "This cutting board costs $19.99"
+     * 2. Create a method called "getDescription()". It returns a String description
+     * of the object. It should be formatted like this:
+     * "This cutting board costs $[price]" Example:
+     * "This cutting board costs $19.99"
      */
+    public double getPrice() {
+        return price;
+    }
+
+    public String getDescription() {
+        return ("This cutting board costs $" + price);
+    }
 
 }
