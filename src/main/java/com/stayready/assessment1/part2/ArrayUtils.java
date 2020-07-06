@@ -1,5 +1,7 @@
 package com.stayready.assessment1.part2;
 
+import java.util.Arrays;
+
 public class ArrayUtils {
     /**
      * @param objectArray   an array of any type of Object
@@ -8,7 +10,14 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+        int occur = 0;
+        for (int i = 0; i < objectArray.length; i++) {
+            if(objectArray[i] == objectToCount)
+            {
+                occur+=1;
+            }
+        }
+        return occur;
     }
 
     /**
@@ -18,7 +27,13 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
+        for (int i = 0; i < objectArray.length; i++) {
+            if(objectArray[i] == objectToRemove)
+            {
+                //objectArray.remove(i);
+            }
+        }
+        return objectArray;
     }
 
     /**
@@ -27,6 +42,18 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
+        int count1 = 0;
+        int count2 = 0;
+        Object result = objectArray[0];
+        Object target = objectArray[0];
+        for (int i = 0; i < objectArray.length; i++) 
+        {
+            if(target == objectArray[i])
+            {
+                count1+=1;
+            }
+            
+        }
         return null;
     }
 
@@ -37,6 +64,18 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
     public static Object getLeastCommon(Object[] objectArray) {
+        int count1 = 0;
+        int count2 = 0;
+        Object result = objectArray[0];
+        Object target = objectArray[0];
+        for (int i = 0; i < objectArray.length; i++) 
+        {
+            if(target == objectArray[i])
+            {
+                count1+=1;
+            }
+            
+        }
         return null;
     }
 
@@ -48,5 +87,5 @@ public class ArrayUtils {
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
         return null;
-    }
+}
 }

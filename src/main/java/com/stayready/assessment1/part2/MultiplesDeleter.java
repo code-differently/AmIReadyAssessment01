@@ -7,7 +7,12 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public static Integer[] deleteEvens(Integer[] ints) {
-        return null;
+        int [] temp;
+        for (int i = 0; i < ints.length; i++) {
+            if(ints[i] % 2 == 0){}
+              //ints.remove(i);
+        }
+        return ints;
     }
 
     /**
@@ -16,7 +21,12 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public static Integer[] deleteOdds(Integer[] ints) {
-        return null;
+        int [] temp;
+        for (int i = 0; i < ints.length; i++) {
+            if(ints[i] % 2 != 0){}
+              //ints.remove(i);
+        }
+        return ints;
     }
 
     /**
@@ -25,7 +35,12 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public static Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+        int [] temp;
+        for (int i = 0; i < ints.length; i++) {
+            if(ints[i] % 3 != 0){}
+              //ints.remove(i);
+        }
+        return ints;
     }
 
     /**

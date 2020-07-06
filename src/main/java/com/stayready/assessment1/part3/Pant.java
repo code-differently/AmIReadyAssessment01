@@ -6,7 +6,7 @@ package com.stayready.assessment1.part3;
  *
  * A pant extends a Garment
  */
-public class Pant {
+public class Pant extends Garment {
 
     /**
      * FIELDS
@@ -17,6 +17,7 @@ public class Pant {
      *
      * - create a field called "length" of type int
      */
+    int length;
 
 
     /*
@@ -34,6 +35,11 @@ public class Pant {
      *     Set the params to the instance fields.
      *
      */
+    public void construct()
+    {
+        price = 0.0;
+        size = "Universal";
+    }
 
 
 
