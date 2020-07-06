@@ -8,7 +8,12 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+        Integer total=0;
+        for (int i = 0; i < objectArray.length; i++) {
+            if(objectArray[i]==objectToCount)
+                total++;
+        }
+        return total;
     }
 
     /**
@@ -18,7 +23,22 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
+        int valid=0;
+        int index=0;
+        for (int i = 0; i < objectArray.length; i++) {
+            if(objectArray[i]==objectToRemove)
+                objectArray[i]=null;
+            else
+                valid++;
+        }
+        Object[] removed=new Object[valid];
+        for (int j = 0; j < objectArray.length; j++) {
+            if(objectArray[j]!=null){
+                removed[index]=objectArray[j];
+                index++;
+            }
+        }
+        return removed;
     }
 
     /**
@@ -47,6 +67,17 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        return null;
+        Object[] merged=new Object[objectArray.length+objectArrayToAdd.length];
+        int index=0;
+        for (int i = 0; i < objectArray.length; i++) {
+            merged[index]=objectArray[i];
+            index++;
+        }
+        for (int j = 0; j < objectArrayToAdd.length; j++) {
+            merged[index]=objectArrayToAdd[j];
+            index++;
+        }
+        return merged;
+
     }
 }
