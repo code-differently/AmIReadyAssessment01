@@ -1,5 +1,6 @@
 package com.stayready.assessment1.part1;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BasicArrayUtils {
