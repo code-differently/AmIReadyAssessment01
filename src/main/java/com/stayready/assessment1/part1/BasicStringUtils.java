@@ -6,7 +6,14 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) {
-        return null;
+        Character.toUpperCase(str.charAt(0));
+        for(int i=0;i<str.length();i++){
+             if (str.charAt(i)==' '){
+                 Character.toUpperCase(str.charAt(i+1));
+             }
+        }
+       
+        return str;
     }
 
     /**
@@ -14,7 +21,11 @@ public class BasicStringUtils {
      * @return string with identical contents, in the reverse order
      */
     public static String reverse(String str) {
-        return null;
+        String copy = "";
+        for (int i = 0 ; i < str.length() ; i++) {
+            copy+= str.charAt(str.length()-i-1);
+        }
+        return copy;
     }
 
     /**

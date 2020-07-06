@@ -8,7 +8,13 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+       int count=0;
+       for( int i=0; i < objectArray.length;i++){
+           if( objectArray[i]==objectToCount){
+               count++;
+           }
+       }
+        return count;
     }
 
     /**
@@ -18,7 +24,13 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
+        Object[] copyArray= new Object[objectArray.length-1];
+        for (int i = 0; i < objectArray.length; i++) {
+            if (objectArray[i].equals(objectToRemove)){
+                copyArray[i] = objectArray[i+1];
+            }
+        }
+        return copyArray;
     }
 
     /**
@@ -27,7 +39,25 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-        return null;
+        int countMax = 1;
+        int countTemp;
+        Object temp;
+        Object mostCommon = objectArray[0];
+        for (int i = 0; i < (objectArray.length - 1); i++)
+            {
+            temp = objectArray[i];
+            countTemp = 0;
+            for (int j = 1; j < objectArray.length; j++) {
+                if (temp == objectArray[j]){
+                countTemp++;
+            }
+        }
+        if (countTemp > countMax) {
+            mostCommon = temp;
+            countMax = countTemp;
+        }
+    }
+    return mostCommon;
     }
 
 
@@ -37,7 +67,25 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
     public static Object getLeastCommon(Object[] objectArray) {
-        return null;
+        int countMin = objectArray.length;
+        int countTemp;
+        Object temp;
+        Object leastCommon  = objectArray[0];
+        for (int i = 0; i < (objectArray.length - 1); i++)
+            {
+            temp = objectArray[i];
+            countTemp = 0;
+            for (int j = 1; j < objectArray.length; j++) {
+                if (temp == objectArray[j]){
+                countTemp++;
+            }
+        }
+        if (countTemp < countMin) {
+            leastCommon = temp;
+            countMin = countTemp;
+        }
+    }
+    return leastCommon;
     }
 
     /**
