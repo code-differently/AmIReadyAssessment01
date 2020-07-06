@@ -1,5 +1,6 @@
 package com.stayready.assessment1.part4;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -28,13 +29,13 @@ public class FloydTriangle {
         {
             for(int j = 1; j <= i; j++)
             {
-                s = start + "\t";
+                s = s +start+" ";
                 start++;
             }
-            s = "\n";
+            s = s.trim() + "\n";
         }
 
-        return s;
+        return s.trim();
     }
 
     /**
@@ -43,6 +44,16 @@ public class FloydTriangle {
      */
     public static String getNthRow(Integer row)
     {
-        //confused
+        int count = 1;
+
+        String s = "";
+        while(count <= row)
+        {
+            int prod = row * (int)(Math.pow(row, 2) + 1) / 2;
+            s = s + prod + " ";
+            count++;
+        }
+
+        return s.substring(0, s.length() - 1);
     }
 }
