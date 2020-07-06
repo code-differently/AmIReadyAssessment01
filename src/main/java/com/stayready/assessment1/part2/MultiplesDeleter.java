@@ -8,7 +8,7 @@ public class MultiplesDeleter {
      */
     public static Integer[] deleteEvens(Integer[] ints) {
         return null;
-    }
+    } 
 
     /**
      * @param ints array of Integer objects

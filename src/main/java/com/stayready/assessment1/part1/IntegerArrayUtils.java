@@ -1,12 +1,16 @@
 package com.stayready.assessment1.part1;
 
 public class IntegerArrayUtils {
+
     /**
      * @param intArray an array of integers
      * @return the sum of `intArray`
      */
     public static Integer getSum(Integer[] intArray) {
-        return null;
+        int sum = 0;
+        for (int i = 0; i < intArray.length; i++)
+            sum += intArray[i]; 
+        return sum; 
     }
 
     /**
@@ -14,7 +18,10 @@ public class IntegerArrayUtils {
      * @return the product of `intArray`
      */
     public static Integer getProduct(Integer[] intArray) {
-        return null;
+        int result = 1; 
+        for (int i = 0; i < intArray.length; i++) 
+            result = result * intArray[i]; 
+        return result; 
     }
 
     /**
@@ -22,7 +29,10 @@ public class IntegerArrayUtils {
      * @return the sum of `intArray` divided by number of elements in `intArray`
      */
     public static Double getAverage(Integer[] intArray) {
-        return null;
+        double sum = 0;
+        for (int i = 0; i < intArray.length; i++)
+            sum += intArray[i]; 
+        return sum / intArray.length;
     }
 
     /**
@@ -30,6 +40,12 @@ public class IntegerArrayUtils {
      * @return the largest integer in intArray
      */
     public static Integer getLargest(Integer[] intArray) {
-        return null;
+        Integer largestInt = intArray[0];
+        for (int i = 1; i < intArray.length; i++) {
+                if(largestInt < intArray[i]){
+                    largestInt = intArray[i];
+                } 
+            }
+            return largestInt;
     }
 }
