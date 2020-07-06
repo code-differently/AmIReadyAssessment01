@@ -15,6 +15,8 @@ public class Garment {
      *  - price is a double
      *  - size is a String
      */
+    private static double price; 
+    private static String size;
 
 
     /**
@@ -30,6 +32,19 @@ public class Garment {
      *
      * 3. A constructor that takes two fields double price and String size.
      */
+    public Garment(){
+
+    }
+
+    public Garment(double price){
+        Garment.price = price; 
+        Garment.size = "Universal";
+    }
+
+    public Garment(double price, String s){
+        Garment.price = price; 
+        Garment.size = s;
+    }
 
 
     /**
@@ -41,4 +56,12 @@ public class Garment {
      * 2.Create a getter method called "getSize" which return the size.
      *    The return type is String.
      */
+
+    public double getPrice(){
+        return Garment.price;
+    }
+
+    public String getSize(){
+        return Garment.size;
+    }
 }
