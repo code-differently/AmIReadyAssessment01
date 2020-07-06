@@ -1,4 +1,8 @@
 package com.stayready.assessment1.part1;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class BasicArrayUtils {
     /**
@@ -6,7 +10,7 @@ public class BasicArrayUtils {
      * @return the first element in the array
      */
     public static String getFirstElement(String[] stringArray) {
-        return null;
+        return stringArray[0];
     }
 
     /**
@@ -14,7 +18,7 @@ public class BasicArrayUtils {
      * @return the second element in the array
      */
     public static String getSecondElement(String[] stringArray) {
-        return null;
+        return stringArray[1] ;
     }
 
     /**
@@ -22,7 +26,10 @@ public class BasicArrayUtils {
      * @return stringArray with the elements in reverse order
      */
     public static String[] reverse(String[] stringArray) {
-        return null;
+            List<String> newArray = Arrays.asList(stringArray);
+            Collections.reverse(newArray);
+            String[] reversed = newArray.toArray(stringArray);
+            return reversed;
     }
 
     /**
@@ -30,6 +37,12 @@ public class BasicArrayUtils {
      * @return String made up of the first character in each element of stringArray
      */
     public static String getFirstLetterOfEachElement(String[] stringArray) {
-        return null;
+            String emptyString = "";
+            for(int i = 0; i <= stringArray.length - 1; i++){
+                emptyString += stringArray[i].substring(0,1);
+            }
+
+            return emptyString;
+
     }
 }
