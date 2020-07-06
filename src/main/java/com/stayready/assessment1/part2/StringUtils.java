@@ -1,5 +1,7 @@
 package com.stayready.assessment1.part2;
 
+import com.stayready.assessment1.part1.BasicStringUtils;
+
 public class StringUtils {
 
     /**
@@ -8,7 +10,7 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+        return sentence.split(" ");
     }
 
 
@@ -18,7 +20,7 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+        return sentence.split(" ")[0];
     }
 
     /**
@@ -27,7 +29,17 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
+        String[] allWords = sentence.split(" ");
+        allWords[0] = BasicStringUtils.reverse(allWords[0]);
+        String newSentence = "";
+
+        for(int i = 0; i < allWords.length; i++) {
+            newSentence += allWords[i];
+            if(i != allWords.length-1)
+                newSentence += " ";
+        }
+
+        return newSentence;
     }
 
     /**
@@ -36,7 +48,25 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
-        return null;
+        String firstReverse = reverseFirstWord(sentence);
+        StringBuilder firstReverseCamelCase = new StringBuilder();
+
+        for(int i = 0; i < firstReverse.length(); i++) {
+            char currentChar = firstReverse.charAt(i);
+
+            if(i == 0) {
+                currentChar = Character.toUpperCase(currentChar);
+                firstReverseCamelCase.append(currentChar);
+            } else if(firstReverse.charAt(i - 1) == ' ') {
+                currentChar = Character.toUpperCase(currentChar);
+                firstReverseCamelCase.append(currentChar);
+            } else if(firstReverse.charAt(i) != ' ') {
+                currentChar = Character.toLowerCase(currentChar);
+                firstReverseCamelCase.append(currentChar);
+            }
+        }
+
+        return firstReverseCamelCase.toString();
     }
 
 
@@ -47,7 +77,14 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+        StringBuilder newString = new StringBuilder();
+
+        for(int i = 0; i < str.length(); i++) {
+            if(i != index)
+                newString.append(str.charAt(i));
+        }
+        
+        return newString.toString();
     }
 
 }

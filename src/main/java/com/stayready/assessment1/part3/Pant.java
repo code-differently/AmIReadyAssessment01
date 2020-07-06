@@ -6,7 +6,7 @@ package com.stayready.assessment1.part3;
  *
  * A pant extends a Garment
  */
-public class Pant {
+public class Pant extends Garment {
 
     /**
      * FIELDS
@@ -18,6 +18,7 @@ public class Pant {
      * - create a field called "length" of type int
      */
 
+     private int length;
 
     /*
      * CONSTRUCTOR
@@ -35,7 +36,23 @@ public class Pant {
      *
      */
 
+     public Pant() {
+         this.price = 0;
+         this.size = "Universal";
+         this.length = 32;
+     }
 
+     public Pant(double price, String size) {
+        this.price = price;
+        this.size = size;
+        this.length = 32;
+    }
+
+    public Pant(double price, String size, int length) {
+        this.price = price;
+        this.size = size;
+        this.length = length;
+    }
 
     /*
      * METHODS
@@ -53,5 +70,16 @@ public class Pant {
      *  Example: "This is a pant. It is Large. It is 32cm. It costs $19.99"
      */
 
+     public int getLength() {
+         return length;
+     }
+
+     public void setLength(int newLength) {
+        length = newLength;
+     }
+
+     public String getDescription() {
+        return "This is a pant. It is " + size + ". It is " + length + "cm. It costs $" + price;
+     }
 
 }

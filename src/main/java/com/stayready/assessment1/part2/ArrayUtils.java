@@ -1,5 +1,7 @@
 package com.stayready.assessment1.part2;
 
+import java.util.ArrayList;
+
 public class ArrayUtils {
     /**
      * @param objectArray   an array of any type of Object
@@ -8,7 +10,14 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+        Integer count = 0;
+        
+        for(int i = 0; i < objectArray.length; i++) {
+            if(objectArray[i].equals(objectToCount))
+                count++;
+        }
+
+        return count;
     }
 
     /**
@@ -18,7 +27,19 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
+        ArrayList<Object> newArray = new ArrayList<>();
+
+        for(int i = 0; i < objectArray.length; i++) {
+            if(!(objectArray[i].equals(objectToRemove))) {
+                newArray.add(objectArray[i]);
+            }
+        }
+        Object[] removed = new Object[newArray.size()];
+        for(int i = 0; i < newArray.size(); i++) {
+            removed[i] = newArray.get(i);
+        }
+        
+        return removed;
     }
 
     /**
@@ -47,6 +68,20 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        return null;
+        ArrayList<Object> merging = new ArrayList<>();
+
+        for(int i = 0; i < objectArray.length; i++) {
+            merging.add(objectArray[i]);
+        }
+        for(int i = 0; i < objectArrayToAdd.length; i++) {
+            merging.add(objectArrayToAdd[i]);
+        }
+
+        Object[] merged = new Object[merging.size()];
+        for(int j = 0; j < merged.length; j++) {
+            merged[j] = merging.get(j);
+        }
+
+        return merged;
     }
 }

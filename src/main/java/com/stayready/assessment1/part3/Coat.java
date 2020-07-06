@@ -6,7 +6,7 @@ package com.stayready.assessment1.part3;
  *
  * A coat extends a Garment
  */
-public class Coat {
+public class Coat extends Garment {
 
     /**
      * FIELDS
@@ -18,6 +18,7 @@ public class Coat {
      * - create a field called "color" of type String
     */
 
+    private String color;
 
     /*
      * CONSTRUCTOR
@@ -34,6 +35,24 @@ public class Coat {
      *     Set the params to the instance fields.
      *
      */
+
+     public Coat() {
+         super.price = 0;
+         super.size = "Universal";
+         this.color = "Black";
+     }
+
+     public Coat(double price) {
+        super.price = price;
+        super.size = "Universal";
+        this.color = "Black";
+    }
+
+    public Coat(double price, String size, String color) {
+        super.price = price;
+        super.size = size;
+        this.color = color;
+    }
 
 
     /*
@@ -53,4 +72,15 @@ public class Coat {
 
      */
 
+     public String getColor() {
+         return color;
+     }
+
+     public void setColor(String newColor) {
+         color = newColor;
+     }
+
+     public String getDescription() {
+         return "This is a " + size + " " + color + " coat. It costs $" + price;
+     }
 }
