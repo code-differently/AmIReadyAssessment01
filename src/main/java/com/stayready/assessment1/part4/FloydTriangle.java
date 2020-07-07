@@ -44,16 +44,9 @@ public class FloydTriangle {
      */
     public static String getNthRow(Integer row)
     {
-        int count = 1;
-
-        String s = "";
-        while(count <= row)
-        {
-            int prod = row * (int)(Math.pow(row, 2) + 1) / 2;
-            s = s + prod + " ";
-            count++;
-        }
-
-        return s.substring(0, s.length() - 1);
+        String tri = generateTriangle(row);
+        String [] countRow = tri.split("\n");
+        //if I do row then it goes out of bounds
+        return countRow[row - 1];
     }
 }
