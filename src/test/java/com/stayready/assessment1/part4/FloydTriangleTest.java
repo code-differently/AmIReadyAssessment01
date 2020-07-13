@@ -3,7 +3,8 @@ package com.stayready.assessment1.part4;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class FloydTriangleTest {
+public class FloydTriangleTest 
+{
 
     @Test
     public void generateTriangleTest() {
